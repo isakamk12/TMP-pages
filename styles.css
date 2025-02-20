@@ -7,18 +7,18 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr); /* 3列 */
+    grid-template-rows: repeat(3, 1fr);    /* 3行 */
+    gap: 5px;
     width: 90%;
     max-width: 1200px;
     margin: auto;
 }
 
 .grid-item {
-    position: relative;
     width: 100%;
-    padding-top: 100%; /* 正方形にする */
+    height: auto;
+    aspect-ratio: 1 / 1; /* 正方形を維持 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -77,17 +77,15 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
     }
 
     .grid-item {
         width: 100%;
-        padding-top: 56.25%; /* 16:9 の比率 */
+        aspect-ratio: 16 / 9; /* 横長に変更 */
     }
 
     .center-item {
         width: 100%;
-        text-align: center;
         font-size: 1.5rem;
     }
 }
