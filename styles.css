@@ -10,7 +10,7 @@ body {
     grid-template-columns: repeat(3, 1fr); /* 3列 */
     grid-template-rows: repeat(3, 1fr);    /* 3行 */
     gap: 10px;
-    width: 90%;
+    max-width: 100%;
     max-width: 1200px;
     margin: auto;
 }
